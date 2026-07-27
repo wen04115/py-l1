@@ -1,8 +1,8 @@
-# def add(a,b):
+#1.def add(a,b):
 #    return a+b
 # print(add(3,5))
 
-# def check_age(age):
+# 2.def check_age(age):
 #     if age>=18:
 #         return("成年")
 #     else:
@@ -10,11 +10,11 @@
 # print(check_age(20))          
 # print(check_age(15))
 
-# def greet(name):
+# 3.def greet(name):
 #    return(f"你好，{name}！")
 # print(greet("小明"))
 
-# score=float(input("请输入分数："))
+# 4.score=float(input("请输入分数："))
 # if score>=90:
 #    print("优秀")
 # elif score>=60 and score<90:
@@ -22,14 +22,14 @@
 # else:
 #    print("不及格")
 
-# score=float(input("请输入分数："))
+# 5.score=float(input("请输入分数："))
 # match score:
 #    case _ if score>=90: print("该分数为A优秀")
 #    case _ if score>=80 and score<90: print("该分数为B良好")
 #    case _ if score>=60 and score<80: print("该分数为C及格")
 #    case _ if score<60: print("该分数不及格")
 
-# 猜数字
+# 6.猜数字
 # import random
 # num=random.randint(1,100)
 # num1=int(input("请输入数字"))
@@ -48,9 +48,11 @@
 #       print(f"猜对了,共猜了{count}次")
 #       break      
 
-# for i in range(1,10):
+# 7.for i in range(1,10):
 #    print(i)
 
-name=input("请输入姓名:")
-age=input("请输入年龄:")
-print(f"我是{name},今年{age}岁")
+# 8.name=input("请输入姓名:")
+# age=input("请输入年龄:")
+# print(f"我是{name},今年{age}岁")
+
+
