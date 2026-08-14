@@ -1,0 +1,14 @@
+[
+  {
+    "title": "python入门",
+    "author": "张三",
+    "price": "60",
+    "stock": 88
+  },
+  {
+    "title": "Java入门",
+    "author": "李四",
+    "price": "42",
+    "stock": 90
+  }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 汉字谜盒</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- 左侧：会话列表 -->
+    <aside class="sidebar">
+        <h2>🀄 汉字谜盒</h2>
+        <button id="newBtn">＋ 新建会话</button>
+        <ul id="sessionList"></ul>
+    </aside>
+
+    <!-- 右侧：聊天 -->
+    <main class="chat">
+        <div id="messages"></div>
+        <div class="inputBar">
+            <input id="userInput" placeholder="猜一猜，或输入谜底..." autocomplete="off">
+            <button id="sendBtn">发送</button>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

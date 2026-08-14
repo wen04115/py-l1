@@ -1,3 +1,8 @@
+from cgi import print_exception
+import json
+from multiprocessing import AuthenticationError
+from re import S
+
 class Book:
     def __init__(self,title,author,price,stock):
         self.title=title
@@ -85,10 +90,36 @@ class BookManagement:
           return
         for i in self.book_list:
            print(i)
+
+    def save_to_file(self):
+        data=[]
+        for book in self.book_list:  
+            data.append({
+                "title" :book.title,
+                "author" : book.author,
+                "price": book.price, 
+                "stock" : book.stock,
+            })
+        with open("books.json","w",encoding="utf-8") as f:
+            json.dump(data,f,ensure_ascii=False,indent=2)   
+        print("已保存到books.json")
+
+    def load_from_file(self):
+        try:
+            with open("books.json","r",encoding="utf-8") as f:
+                data=json.load(f)
+            self.book_list=[]
+            for item in data:
+                book=Book(item["title"],item["author"],item["price"],item["stock"])
+                self.book_list.append(book)
+                print("已从books.json加载完毕")
+        except FileNotFoundError:
+            print("未找到books.json,将以空列表启动")                         
         
 
     def run(self):
         print("欢迎使用图书管理系统 1.0")
+        self.load_from_file()
         while True:
             print("#" * 8)
             print("#1.添加图书 2.修改库存 3.删除图书 4.查询图书 5.展示所有 6.退出系统 #")
@@ -101,10 +132,13 @@ class BookManagement:
             match choice:
                 case 1:
                     self.add_book()
+                    self.save_to_file()
                 case 2:
-                    self.update_stock() 
+                    self.update_stock()
+                    self.save_to_file() 
                 case 3:
                     self.delete_book()
+                    self.save_to_file()
                 case 4:
                     self.quary_book()
                 case 5:
