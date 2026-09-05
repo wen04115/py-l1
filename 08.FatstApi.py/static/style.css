@@ -39,6 +39,64 @@ body {
 
 #newBtn:hover { background: #ffd97a; }
 
+/* ===== 登录区 ===== */
+#loginBox {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#loginBox input {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+}
+
+.loginBtns {
+    display: flex;
+    gap: 8px;
+}
+
+.loginBtns button {
+    flex: 1;
+    padding: 7px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#loginBtn {
+    background: #f0c75e;
+    color: #2c2c2c;
+    font-weight: bold;
+}
+
+#loginBtn:hover { background: #ffd97a; }
+
+#registerBtn {
+    background: #555;
+    color: #fff;
+}
+
+#registerBtn:hover { background: #666; }
+
+#logoutBtn {
+    padding: 7px;
+    border: none;
+    border-radius: 6px;
+    background: #e07a6f;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#logoutBtn:hover { background: #ff5a4d; }
+
 #sessionList {
     flex: 1;
     overflow-y: auto;

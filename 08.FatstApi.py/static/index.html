@@ -8,9 +8,18 @@
 </head>
 <body>
 
-    <!-- 左侧：会话列表 -->
+    <!-- 左侧：登录 + 会话列表 -->
     <aside class="sidebar">
         <h2>🀄 汉字谜盒</h2>
+        <div id="loginBox">
+            <input id="loginUser" placeholder="用户名" autocomplete="off">
+            <input id="loginPass" type="password" placeholder="密码">
+            <div class="loginBtns">
+                <button id="loginBtn">登录</button>
+                <button id="registerBtn">注册</button>
+            </div>
+            <button id="logoutBtn" style="display:none">退出登录</button>
+        </div>
         <button id="newBtn">＋ 新建会话</button>
         <ul id="sessionList"></ul>
     </aside>
