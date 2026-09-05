@@ -23,17 +23,22 @@ ollama list   # 应该看到 qwen2.5:3b
 python ai_chat.py
 ```
 
-### Python 基础练习
+### 汉字谜盒 API（first_api.py + React 前端）
 
-| 文件 | 内容 |
-|------|------|
-| 01.第一章/moxie.py | 默写练习 |
-| 02.第二章/成绩判定程序.py | match-case |
-| 02.第二章/猜数字游戏.py | while + random |
-| 03.第三章/代办事项管理器.py | 列表操作 |
-| 03.第三章/购物车管理系统.py | 字典操作 |
-| 03.第三章/通讯录管理系统.py | 嵌套字典 |
-| 04.第四章/ | OOP 面向对象 |
+基于 FastAPI 的汉字谜语管理后端（全栈项目 1），配套 React 前端 hanzi-box，带日志和自动化测试。
+
+- **增删查接口**：GET/POST /api/riddles、GET/DELETE /api/riddles/{id}
+- **JSON 持久化**：riddle.json 存数据，启动自动加载
+- **logging 日志**：分级（INFO/WARNING/DEBUG），双写终端 + riddle_api.log 文件
+- **pytest 测试**：4 个接口测试全过（test_api.py）
+
+运行：
+```bash
+uvicorn first_api:app --reload --port 8000   # 启动后端（py-l1 目录）
+pytest test_api.py -v                        # 跑测试，4 passed
+```
+
+
 
 ## 技术栈
 
@@ -42,3 +47,6 @@ python ai_chat.py
 - Ollama + qwen2.5:3b（本地 LLM）
 - Cursor IDE
 - Git + GitHub
+- FastAPI + uvicorn（Web API 后端）
+- pytest + httpx（接口自动化测试）
+- React + Vite + axios（前端 hanzi-box）
