@@ -44,3 +44,6 @@ dist/
 # 第三章
 03.第三章/0*.py
 03.第三章/lianxi*.py
+
+# pytest cache
+.pytest_cache/
